@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>Counterwatch</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="bg-style">
+  <h3>Click on a hero below to see their counters!</h3>
+  <!-- forEach loop that goes through every hero and displays a card with their name and image on it. 
+      This data is gathered from the sheetsu api created from a google spreadsheet.
+      Have to use 2 loops since free version of sheetsu only allows spreadsheets of 20 rows to be made into APIs. -->
+  <ion-card *ngFor="let data of dataList1" (click)="goToHeroCountersPage(data)">
+    <ion-card-content>
+      <ion-card-title>
+        {{ data.Character }}
+      </ion-card-title>
+      <img src={{data.ImagePath}}/>
+    </ion-card-content>
+  </ion-card>
+  <ion-card *ngFor="let data of dataList2" (click)="goToHeroCountersPage(data)">
+      <ion-card-content>
+        <ion-card-title>
+          {{ data.Character }}
+        </ion-card-title>
+        <img src={{data.ImagePath}}/>
+      </ion-card-content>
+    </ion-card>
+</ion-content>

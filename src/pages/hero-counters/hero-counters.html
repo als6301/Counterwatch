@@ -1,0 +1,31 @@
+<ion-header>
+
+  <ion-navbar color="dark">
+    <!-- Displays name of the hero that was clicked on in NavBar to let users know they've moved pages. -->
+    <ion-title>{{heroDetails.Character}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="bg-style">
+  <ion-card>
+    <!-- Shows image of hero on card -->
+    <img src={{heroDetails.ImagePath}}/>
+  </ion-card>
+  
+  <ion-card>
+    <!-- Shows hero counters and countered by -->
+    <ion-card-header>Countered By:</ion-card-header>
+    <ion-card-content color="darkest">
+      {{heroDetails.CounteredBy}}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+      <ion-card-header>Counters:</ion-card-header>
+      <ion-card-content color="darkest">
+        {{heroDetails.Counters}}
+      </ion-card-content>
+    </ion-card>
+</ion-content>

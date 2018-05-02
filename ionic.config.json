@@ -1,0 +1,8 @@
+{
+  "name": "counterwatch",
+  "app_id": "36e8578f",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>Player Stats</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="bg-style">
+  <!-- Displays all of the data from the OWAPI api call based on the BattleTag that was entered. -->
+  <h1>Competitive Stats:</h1>
+
+    <div text-center>
+      <img src="{{compIcon}}" class="center"/>
+    </div>
+    <h2 class="center">SR: {{ compRank | json }}</h2>
+    <h3>Eliminations:</h3>
+      <p>{{ compElims | json }}</p>
+    <h3>Final Blows:</h3>
+      <p>{{ compBlows | json }}</p>
+    <h3>Objective Kills:</h3>
+      <p>{{ compObKills | json }}</p>
+    <h3>Objective Time:</h3>
+      <p>{{ compObTime | json }}</p>
+    <h3>Hero Damage:</h3>
+      <p>{{ compHeroDamage | json }}</p>
+    <h3>Healing:</h3>
+      <p>{{ compHealing | json }}</p>
+    <h3>Time on Fire:</h3>
+      <p>{{ compFire | json }}</p>
+    <h3>Solo Kills:</h3>
+      <p>{{ compSolo | json }}</p>
+  
+  <br>
+
+  <h1>Quick Play Stats:</h1>
+    <h3>Eliminations:</h3>
+      <p>{{ quickElims | json }}</p>
+    <h3>Final Blows:</h3>
+      <p>{{ quickBlows | json }}</p>
+    <h3>Objective Kills:</h3>
+      <p>{{ quickObKills | json }}</p>
+    <h3>Objective Time:</h3>
+      <p>{{ quickObTime | json }}</p>
+    <h3>Hero Damage:</h3>
+      <p>{{ quickHeroDamage | json }}</p>
+    <h3>Healing:</h3>
+      <p>{{ quickHealing | json }}</p>
+    <h3>Time on Fire:</h3>
+      <p>{{ quickFire | json }}</p>
+    <h3>Solo Kills:</h3>
+      <p>{{ quickSolo | json }}</p>
+</ion-content>

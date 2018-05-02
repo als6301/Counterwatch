@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>Player Stats</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="bg-style">
+  <!-- Text entry field with a note at the bottom explaining correct format. -->
+  <h3>Enter your BattleTag to see your competitive and quick play stats!</h3>
+  <ion-item>
+    <ion-label color="primary" stacked>Enter Battletag:</ion-label>
+    <ion-input type="text" placeholder="Yourbattletag-#####" [(ngModel)]="battleTag"></ion-input>
+  </ion-item>
+  <button ion-button round color="primary" (click)="goToStatDetailsPage(battleTag)">See your Stats</button>
+  <p>* You MUST enter your BattleTag in the format of Name-idNumber. If you don't the API will not be able to correctly display your statistics. Please be patient while waiting for your stats to display. Over 35 Million people play Overwatch world-wide! It can take a moment to find the correct data.</p>
+</ion-content>

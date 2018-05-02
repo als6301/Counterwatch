@@ -1,0 +1,28 @@
+<ion-header>
+
+  <ion-navbar color="dark">
+    <ion-title>{{mapDetails.MapName}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="bg-style">
+  <!-- Shows image for each map along with offensive and defensive strategies for the map that was clicked on on the maps page.-->
+    <ion-card>
+        <img src={{mapDetails.ImagePath}}/>
+    </ion-card>
+
+    <ion-card>
+        <ion-card-header>Offensive Strategy:</ion-card-header>
+        <ion-card-content color="darkest">
+          {{mapDetails.Attack}}
+        </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+        <ion-card-header>Defensive Strategy:</ion-card-header>
+        <ion-card-content color="darkest">
+          {{mapDetails.Defense}}
+        </ion-card-content>
+      </ion-card>
+</ion-content>

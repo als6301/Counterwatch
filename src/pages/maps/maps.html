@@ -1,0 +1,21 @@
+<ion-header>
+
+  <ion-navbar color="dark">
+    <ion-title>Map Info</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="bg-style">
+  <h3>Click on a map below to see offensive and defensive strategies for it!</h3>
+    <!-- forEach loop that goes through every map and displays a card with their name and image on it. 
+      This data is gathered from the sheetsu api created from a google spreadsheet. -->
+    <ion-card *ngFor="let data of mapDataList" (click)="goToMapDetailsPage(data)">
+        <ion-card-content>
+          <ion-card-title>
+            {{ data.MapName }}
+          </ion-card-title>
+          <img src={{data.ImagePath}}/>
+        </ion-card-content>
+      </ion-card>
+</ion-content>
